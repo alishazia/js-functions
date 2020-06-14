@@ -6,3 +6,5 @@ const divideBtn = document.getElementById("div-btn");
 
 const currentResultOutput = document.getElementById("current-result");
 const currentCalculationOutput = document.getElementById("current-calculation");
+
+console.log("hello")

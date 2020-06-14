@@ -1,36 +1,86 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
-    <style>
-      body {
-        font-family: 'Tangerine', serif;
-        font-size: 48px;
-      }
-    </style>
-  <title> Creating a calacutor </title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+	<style>
+		.calci-results {
+			background-color: yellowgreen;
+
+		}
+
+		.calc-main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.button-style {
+			font-size: 50px;
+			color: red;
+		}
+
+		.current-calc {
+			margin-left: 20px;
+		}
+
+		.calc-section {
+			display: flex;
+			color: #000;
+			font-family: "#lato";
+			font-size: 20px;
+			margin: 5%;
+		}
+
+		body {
+			font-family: 'Tangerine', serif;
+			font-size: 48px;
+			color: blue;
+			background: cyan;
+			padding: 3%;
+		}
+
+		input {
+			size: 30px;
+			padding: 20px;
+			margin-bottom: 25px;
+		}
+
+		button {
+			size: 30px;
+			padding: 20px;
+		}
+	</style>
+	<title> Creating a calacutor </title>
 </head>
-<body> 
-<header>
-  <section>
-   Calculator
-  </section>
-</header>
-<section id="calculator">
-  <input type="number" id="input-number"/>
-  <div id="calc-actions">
-    <button type="button" id="add-btn">+</button>
-    <button type="button" id="sub-btn">-</button>
-    <button type="button" id="mul-btn">*</button>
-    <button type="button" id="div-btn">/</button>
-  </div>
-</section>
-<section id="results">
-  <div id="curreent-calculation"></div>
-  <div id="current-result"></div>
-</section>
-<script src="assets/scripts/vendor.js"></script>
-<script src="assets/scripts/app.js"></script>
+
+<body>
+	<header>
+		<section>
+			Calculator
+		</section>
+	</header>
+	<section id="calculator" class="calc-main">
+		<input type="number" id="input-number"/>
+		<div id="calc-actions">
+			<button type="button" id="add-btn" class="button-style">+</button>
+			<button type="button" id="sub-btn" class="button-style">-</button>
+			<button type="button" id="mul-btn" class="button-style">*</button>
+			<button type="button" id="div-btn" class="button-style">/</button>
+		</div>
+	</section>
+	<div class="calci-results">
+		<section id="results" class="calc-section">
+			<label >Current calculation </label>
+			<div id="current-calculation" class="current-calc">0</div>
+		</section>
+		<section id="results" class="calc-section">
+			<label  >Result</label>
+			<div id="current-result" class="current-calc">0</div>
+		</section>
+	</div>
+	<script src="assests/vendor.js"></script>
+	<script src="assests/app.js"></script>
 </body>
+
 </html>
