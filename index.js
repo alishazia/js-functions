@@ -17,4 +17,13 @@ let currentResult = 0;
 
 currentResult = currentResult + (10 * 2) + 12/2;
 
-outputResult(currentResult , '')
+// passing a string here in the function
+// let currentDescription = '(10 * 2) + 12/2';
+
+// here we are using bactick and display a value as a string 
+let calculateValue = `(10 * 2) + 12/2`;
+
+// here we using backtick and rendering the dynamic value there using $ sign
+let currentDescription = `(${currentResult} * 2) + 12/2`;
+
+outputResult(currentResult , currentDescription)
